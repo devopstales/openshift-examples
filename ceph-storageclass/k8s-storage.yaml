@@ -1,0 +1,19 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  annotations:
+    storageclass.kubernetes.io/is-default-class: "true"
+  name: k8s
+parameters:
+  adminId: admin
+  adminSecretName: ceph-admin-secret
+  adminSecretNamespace: kube-system
+  imageFeatures: layering
+  imageFormat: "2"
+  monitors: 192.168.1.31, 192.168.1.32, 192.168.1.33
+  pool: k8s
+  userId: k8s
+  userSecretName: ceph-secret-k8s
+provisioner: kubernetes.io/rbd 
+reclaimPolicy: Delete
+volumeBindingMode: Immediate

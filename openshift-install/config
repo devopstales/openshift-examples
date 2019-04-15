@@ -1,0 +1,11 @@
+Host openshift01
+    Hostname openshift01.mydomain.intra
+    User origin
+ 
+Host openshift02
+    Hostname openshift02.mydomain.intra
+    User origin
+ 
+Host openshift03
+    Hostname openshift03.mydomain.intra
+    User origin
